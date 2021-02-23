@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+
+    <body>
+        <h5 style="text-align: right"> <a href="/quotes" style="margin: 20px">DashBoard</a> | <a href="/logout" style="margin: 20px">Log out</a></h5>
+        <div class="container">
+            {%for quote in userQuotes%}
+                <h1>Quotes Created By: {{quote.maker.first_name}}</h1>
+                <p>Author: {{quote.author}} </p>
+                <p>Description: {{quote.desc}}</p>
+            {%endfor%}
+        </div>
+    </body>
+</html>
